@@ -1,26 +1,26 @@
-# @hyperswarm/replicator
+# @dswarm/replicator
 
-Replicate data structures easily using hyperswarm
+Replicate data structures easily using dSwarm
 
 ## Install
 
 ```js
-npm install @hyperswarm/replicator
+npm install @dswarm/replicator
 ```
 
 ## Usage
 
 You data structure has to support a .replicate() stream, then you can replicate
-them using the hyperswarm replicator.
+them using the dSwarm replicator.
 
 ```js
-const replicate = require('@hyperswarm/replicator')
+const replicate = require('@dswarm/replicator')
 
-const swarm = replicate(aHypercore, {
+const swarm = replicate(aDDatabase, {
   live: true // passed to .replicate
 })
 
-// swarm is a hyperswarm instance that replicates the passed in instance
+// swarm is a dSwarm instance that replicates the passed in instance
 ```
 
 ## API
