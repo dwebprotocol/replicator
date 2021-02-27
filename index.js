@@ -1,4 +1,4 @@
-const hyperswarm = require('hyperswarm')
+const dswarm = require('dswarm')
 const pump = require('pump')
 
 class Event {
@@ -24,7 +24,7 @@ function replicator (r, opts, cb) {
   if (typeof opts === 'function') return replicator(r, null, opts)
   if (!opts) opts = {}
 
-  const swarm = hyperswarm({
+  const swarm = dswarm({
     announceLocalAddress: !!opts.announceLocalAddress,
     preferredPort: 49737,
     bootstrap: opts.bootstrap
